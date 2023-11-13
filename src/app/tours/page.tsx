@@ -25,9 +25,11 @@ const ToursPage = async () => {
   return (
     <div>
       <StoryblokStory story={story} />
-      {tours.map((tour) => (
-        <RecommendedTour story={tour} key={tour.content._uid} />
-      ))}
+      <div className="grid md:grid-cols-2 gap-8 container mx-auto px-4 w-full py-16">
+        {tours.map((tour) => (
+          <RecommendedTour story={tour} key={tour.content._uid} />
+        ))}
+      </div>
     </div>
   );
 };
